@@ -60,16 +60,6 @@ export const handleAPI = async (data, res) => {
     const getMe = await users.findOne({ id: idMe })
     console.log(getMe)
     response = getMe
-
-    // dataList.forEach(element => {
-    //   const saveUser = new users(element)
-    //   saveUser.save(function (error) {
-    //   console.log("Your bee has been saved!");
-    //   if (error) {
-    //     console.error(error);
-    //   }
-    // })
-    // })
   }
   else {
     response = {
