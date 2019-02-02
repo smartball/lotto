@@ -58,7 +58,6 @@ export const handleAPI = async (data, res) => {
   }
   else if (data.method === 'getUser') {
     const getMe = await users.findOne({ id: idMe })
-    console.log(getMe)
     response = getMe
   }
   else {
