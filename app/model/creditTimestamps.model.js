@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose"
 
 const credit_timestamps = new Schema({
-    id: Number,
+    transaction_id: Number,
     user_id: Number,
     init_credit: Number,
     remaining_credit: Number,
@@ -11,7 +11,8 @@ const credit_timestamps = new Schema({
     recieve_amount: Number,
     send_amount: Number,
     created_at: String,
-    updated_at: String
+    updated_at: String,
+    transaction_success: Boolean
 })
 
 module.exports = mongoose.model('credit_timestamps', credit_timestamps)

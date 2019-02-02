@@ -15,8 +15,8 @@ export const initUserCredit = (credit, me, user) => {
   me.child_credit += credit;
   me.updated_at = moment().utcOffset(7).format('YYYY-MM-DD HH:mm:ss')
 
-  user.init_credit += credit;
-  user.remaining_credit += credit;
+  user.init_credit = credit;
+  user.remaining_credit = credit;
   user.child_credit = 0;
   user.bet = 0;
   user.updated_at = moment().utcOffset(7).format('YYYY-MM-DD HH:mm:ss')
